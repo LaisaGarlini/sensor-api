@@ -1,0 +1,82 @@
+[
+    {
+        "id_sensor":"TEMP_SALA_A01",
+        "tipo":"Temperatura",
+        "localizacao":"Sala de Reuniões A - Bloco 1",
+        "valor":"23.5°C",
+        "timestamp":"2025-06-04T10:30:00Z",
+        "unidade_medida":"Celsius"
+    },
+    {
+        "id_sensor":"UMID_ESTUFA_B03",
+        "tipo":"Umidade",
+        "localizacao":"Estufa de Plantas B - Setor Verde",
+        "valor":"65%",
+        "timestamp":"2025-06-04T10:32:15Z",
+        "unidade_medida":"%RH"
+    },
+    {
+        "id_sensor":"LUMINOSIDADE_CORREDOR_C02",
+        "tipo":"Luminosidade",
+        "localizacao":"Corredor Principal C - Bloco 2",
+        "valor":"300 lux",
+        "timestamp":"2025-06-04T10:35:45Z",
+        "unidade_medida":"lux"
+    },
+    {
+        "id_sensor":"PRESSAO_SALA_D04",
+        "tipo":"Pressão Atmosférica",
+        "localizacao":"Sala de Controle D - Bloco 4",
+        "valor":"1013 hPa",
+        "timestamp":"2025-06-04T10:40:00Z",
+        "unidade_medida":"hPa"
+    },
+    {
+        "id_sensor":"CO2_SALA_E05",
+        "tipo":"Concentração de CO2",
+        "localizacao":"Sala de Estudo E - Bloco 5",
+        "valor":"400 ppm",
+        "timestamp":"2025-06-04T10:45:30Z",
+        "unidade_medida":"ppm"
+    },
+    {
+        "id_sensor":"MOVIMENTO_ENTRADA_F01",
+        "tipo":"Detecção de Movimento",
+        "localizacao":"Entrada Principal F - Bloco 1",
+        "valor":"Ativo",
+        "timestamp":"2025-06-04T10:50:00Z",
+        "unidade_medida":""
+    },
+    {
+        "id_sensor":"FUMO_COZINHA_G02",
+        "tipo":"Detecção de Fumaça",
+        "localizacao":"Cozinha G - Bloco 2",
+        "valor":"Nenhum",
+        "timestamp":"2025-06-04T10:55:15Z",
+        "unidade_medida":""
+    },
+    {
+        "id_sensor":"VIBRACAO_MAQUINA_H03",
+        "tipo":"Vibração de Máquina",
+        "localizacao":"Máquina Industrial H - Bloco 3",
+        "valor":"Normal",
+        "timestamp":"2025-06-04T11:00:00Z",
+        "unidade_medida":""
+    },
+    {
+        "id_sensor":"NIVEL_AGUA_I04",
+        "tipo":"Nível de Água",
+        "localizacao":"Tanque de Água I - Bloco 4",
+        "valor":"50%",
+        "timestamp":"2025-06-04T11:05:30Z",
+        "unidade_medida":"%"
+    },
+    {
+        "id_sensor":"QUALIDADE_AR_J05",
+        "tipo":"Qualidade do Ar",
+        "localizacao":"Sala de Pesquisa J - Bloco 5",
+        "valor":"Boa",
+        "timestamp":"2025-06-04T11:10:00Z",
+        "unidade_medida":""
+    }
+]
