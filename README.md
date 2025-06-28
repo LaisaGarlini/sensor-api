@@ -101,5 +101,4 @@ sensor-api/
 
 ---
 
-## 📸 Evidências de execução
 
