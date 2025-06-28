@@ -1,0 +1,50 @@
+---
+- name: Deploy da API sensor-api em EC2 Ubuntu
+  hosts: sensor-api
+  become: yes
+
+  tasks:
+    - name: Atualizar cache do apt
+      apt:
+        update_cache: yes
+
+    - name: Instalar dependências essenciais
+      apt:
+        name:
+          - git
+          - curl
+          - build-essential
+        state: present
+
+    - name: Instalar Node.js 18.x via NodeSource
+      shell: |
+        curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+        apt-get install -y nodejs
+      args:
+        creates: /usr/bin/node
+
+    - name: Instalar pm2 globalmente
+      npm:
+        name: pm2
+        global: yes
+        state: present
+
+    - name: Clonar repositório sensor-api (ou pull se já existir)
+      git:
+        repo: 'https://github.com/LaisaGarlini/sensor-api.git'
+        dest: /home/ubuntu/sensor-api
+        update: yes
+        force: yes
+
+    - name: Instalar dependências npm da API
+      npm:
+        path: /home/ubuntu/sensor-api
+        production: yes
+
+    - name: Reiniciar aplicação com pm2
+      shell: |
+        pm2 delete sensor-api || true
+        pm2 start /home/ubuntu/sensor-api/src/index.js --name sensor-api
+        pm2 save
+      args:
+        executable: /bin/bash
